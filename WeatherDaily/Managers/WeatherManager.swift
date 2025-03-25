@@ -12,6 +12,7 @@ class WeatherManager {
     func getCurrentWeather(latitude: CLLocationDegrees, longitude : CLLocationDegrees)async throws -> ResponseBody{
         guard let url = URL(string:"https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\("9f5aa2efa58eb4d4bf1997e7d9d28048")&units=metric") else{
             fatalError("Missing URL")}
+        
         let urlRequest = URLRequest(url: url)
         
         let (data, response) = try await URLSession.shared.data(for: urlRequest)

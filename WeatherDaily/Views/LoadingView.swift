@@ -12,7 +12,7 @@ struct LoadingView: View {
         VStack {
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle())
-                .tint(.blue)  
+                .tint(.white)  
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
